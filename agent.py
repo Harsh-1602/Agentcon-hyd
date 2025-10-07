@@ -44,15 +44,15 @@ class Assistant(Agent):
 
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession(
-        # llm=google.beta.realtime.RealtimeModel(
-        #     model="gemini-2.0-flash-exp",
-        #     voice="Aoede",
-        #     temperature=0.8,
-        #             ),
-        llm=groq.LLM(model="llama-3.1-8b-instant", temperature=0.7),
-        stt=deepgram.STT(model="nova-3", language="multi"),
-        tts=deepgram.TTS(model="aura-asteria-en",),
-        vad=silero.VAD.load(),
+        llm=google.beta.realtime.RealtimeModel(
+            model="gemini-2.0-flash-exp",
+            voice="Puck",
+            temperature=0.8,
+                    ),
+        # llm=groq.LLM(model="llama-3.1-8b-instant", temperature=0.7),
+        # stt=deepgram.STT(model="nova-3", language="multi"),
+        # tts=deepgram.TTS(model="aura-asteria-en",),
+        # vad=silero.VAD.load(),
     )
 
     await session.start(
