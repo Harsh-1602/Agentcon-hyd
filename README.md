@@ -72,6 +72,12 @@ GOOGLE_API_KEY=your-google-api-key
 pip install -r req.txt
 ```
 
+### 4. Install livekit dependencies
+
+```bash
+python agent.py download-files
+```
+
 ### 4. Run the Agent in console
 
 ```bash
